@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1, width=device-width">
+
+      <!-- http://getbootstrap.com/docs/4.5/ -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+      <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+      <link href="/static/favicon.ico" rel="icon">
+
+      <link href="/static/styles.css" rel="stylesheet">
+
+      <!-- http://getbootstrap.com/docs/4.5/ -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+      <meta name="viewport" content="initial-scale=1, width=device-width">
+
+      <title>Transformer Test</title>
+
+  </head>
+
+  <body>
+    <main class="container p-5" >
+      <script>
+
+        window.onload = real;
+
+
+        function real(){
+          document.getElementById("re").style.display = "block";
+          document.getElementById("tp").style.display = "none";
+          document.getElementById("ts").style.display = "none";
+          document.getElementById("lp").style.display = "none";
+          document.getElementById("ls").style.display = "none";
+        }
+        function tp(){
+          document.getElementById("re").style.display = "none";
+          document.getElementById("tp").style.display = "block";
+          document.getElementById("ts").style.display = "none";
+          document.getElementById("lp").style.display = "none";
+          document.getElementById("ls").style.display = "none";
+        }
+        function ts(){
+          document.getElementById("re").style.display = "none";
+          document.getElementById("tp").style.display = "none";
+          document.getElementById("ts").style.display = "block";
+          document.getElementById("lp").style.display = "none";
+          document.getElementById("ls").style.display = "none";
+        }
+        function lp(){
+          document.getElementById("re").style.display = "none";
+          document.getElementById("tp").style.display = "none";
+          document.getElementById("ts").style.display = "none";
+          document.getElementById("lp").style.display = "block";
+          document.getElementById("ls").style.display = "none";
+        }
+        function ls(){
+          document.getElementById("re").style.display = "none";
+          document.getElementById("tp").style.display = "none";
+          document.getElementById("ts").style.display = "none";
+          document.getElementById("lp").style.display = "none";
+          document.getElementById("ls").style.display = "block";
+        }
+      </script>
+      <div id="navmargin">
+        <ul class="nav nav-pills justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="pill" onClick="real()">Real</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" onClick="tp()">T Circuit (P)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" onClick="ts()">T Circuit (S)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" onClick="lp()">L Circuit(P)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" onClick="ls()">L Circuit(S)</a>
+          </li>
+        </ul>
+      </div>
+
+        <div id="re" class="hidden">
+          <div id="center">
+            <img id="img" src="static/real.png" alt="Results">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                      <p>R<sub>1</sub> = {{ rp }}Ω</p>
+                      <p>X<sub>l1</sub> = {{ xp }}Ω</p>
+                      <p>R<sub>c</sub> = {{ rc_p }}Ω</p>
+                      <p>X<sub>m</sub> = {{ xm_p }}Ω</p>
+
+                  </div>
+                  <div class="col-md-6">
+
+                      <p>R<sub>2</sub> = {{ rs }}Ω</p>
+                      <p>X<sub>l2</sub> = {{ xs }}Ω</p>
+                      <p>Perdas no núcleo: {{ pnucleo }}W</p>
+                      <p>Perdas no cobre: {{ pcu }}W</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div id="tp" class="hidden">
+
+          <div id="center">
+            <img id="img" src="static/tprimario.png" alt="Results">
+              <div class="container">
+                <div class="row">
+
+                  <div class="col-md-6">
+                      <p>Vp = {{ vp }}V</p>
+                      <p>Rp = {{ rp }}Ω</p>
+                      <p>jXp = {{ xp }}Ω</p>
+                      <p>Rc = {{ rc_p }}Ω</p>
+
+                  </div>
+
+                  <div class="col-md-6">
+                      <p>aVs = {{ vp }}V</p>
+                      <p>jXm = {{ xm_p }}Ω</p>
+                      <p>a²Rs = {{ rp }}Ω</p>
+                      <p>ja²Xs = {{ xp }}Ω</p>
+                  </div>
+
+                </div>
+              </div>
+          </div>
+        </div>
+
+        </div>
+
+        <div id="ts" class="hidden">
+
+            <div id="center">
+              <img id="img" src="static/tsecundario.png" alt="Results">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <p>Vp/a = {{ vs }}V</p>
+                        <p>Rp/a² = {{ rs }}Ω</p>
+                        <p>jXp/a² = {{ xs }}Ω</p>
+                        <p>Rc/a² = {{ rc_s }}Ω</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Vs = {{ vs }}V</p>
+                        <p>Rs = {{ rs }}Ω</p>
+                        <p>jXs = {{ xs }}Ω</p>
+                        <p>jXm/a² = {{ xm_s }}Ω</p>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="lp" class="hidden">
+
+            <div id="center">
+              <img id="img" src="static/lprimario.png" alt="Results">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <p>Vp = {{ vp }}V</p>
+                        <p>Rc = {{ rc_p }}Ω</p>
+                        <p>jXm = {{ xm_p }}Ω</p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p>aVs = {{ vp }}V</p>
+                        <p>Req(p) = {{ req_p }}Ω</p>
+                        <p>Xeq(p) = {{ xeq_p }}Ω</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="ls" class="hidden">
+
+            <div id="center">
+              <img id="img" src="static/lsecundario.png" alt="Results">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <p>Vp/a = {{ vs }}V</p>
+                        <p>Rc/a² = {{ rc_s }}Ω</p>
+                        <p>jXm/a² = {{ xm_s }}Ω</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Vs = {{ vs }}V</p>
+                        <p>Req(s) = {{ req_s }}Ω</p>
+                        <p>Xeq(s) = {{ xeq_s }}Ω</p>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+    </main>
+    <footer class="small text-center text-muted">
+        Developed by Natã Rodrigo. Visit my <a href="https://github.com/natrodrigo" target="_blank">Github page</a>.
+    </footer>
+  </body>
+</html>

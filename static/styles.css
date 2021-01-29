@@ -1,0 +1,30 @@
+#a{
+    font-size: 23px;
+}
+#center{
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+#img{
+    max-width: 100%;
+    margin: 0px 0px 25px 0;
+}
+
+#text{
+    position: relative;
+    bottom:25px;
+}
+#navmargin{
+    margin:-30px 20px 20px 20px;
+}
+
+#margin{
+    margin:10px 0px 0px 0px;
+}
+.hidden{
+    display:none;
+    text-align: center;
+}
