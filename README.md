@@ -23,11 +23,16 @@ Inside **main** are the bootstrap form codes. They are all **required** and acce
 
 **`results.html`**   
 
-'results.html' starts with the same settings as 'index.html'.
+**results.html** starts with the same settings as **index.html**.
 In main, there is a script that will be explained later.
 
-In 'main' there are also 'nav-menus' with their specific content.
-Each of them is hidden by the 'hidden' class.
+In **main** there are also **nav-menus** with their specific content.
+Each of them is hidden by the **hidden** class.
 Nav-menus are configured so that when clicked, they call Javascript functions.
 
-Each of these functions is in the initial script and is responsible ...
+Each of these functions is in the initial **script** and has the navigation effect that Nav-menus have.  
+Each of them displays one of the contents while hiding all the others.  
+
+**`static`**   
+
+Here are the static files: images, CSS stylesheet, and the favicon.ico.
