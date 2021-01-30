@@ -1,7 +1,6 @@
 # Equivalent Circuit
 #### Video Demo:  <https://www.youtube.com/watch?v=Of_91h3m_2E&feature=youtu.be>
-#### Description: A Web Application developed in python to assist in calculating the equivalent resistance of transformers from measurements made in open circuit and short circuit tests.
-My project is a web application developed using the knowledge of flask covered in the course.  
+#### Description: A Web Application developed in python to assist in calculating the equivalent resistance of transformers from measurements made in open circuit and short circuit tests.To determine the internal resistances of a transformer, we need to do tests with it at no load and at full load. For this, we apply voltage in the primary or secondary while the other side is shorted or with an open circuit, then we measure the voltages and currents. With the voltage and current data, we can calculate the internal resistances, and this is what my application does. 
 
 **`application.py`**  
 
